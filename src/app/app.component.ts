@@ -36,7 +36,7 @@ export class AppComponent {
         value: 'Bombasto',
         required: true,
         order: 5,
-        class: 'red',
+       // class: 'red',
       }),
 
      new DropdownQuestion({
@@ -80,7 +80,7 @@ export class AppComponent {
     ]
 
   constructor(service: QuestionService) {
-    this.questions = service.getQuestions();
+    this.questions = this.questions2;
   }
 
 
