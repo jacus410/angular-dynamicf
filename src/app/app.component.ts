@@ -1,7 +1,9 @@
 import { Component }       from '@angular/core';
-import { QuestionBase } from './question-base';
-import { QuestionService } from './question.service';
 
+import { QuestionService } from './question.service';
+import { DropdownQuestion } from './question-dropdown';
+import { QuestionBase }     from './question-base';
+import { TextboxQuestion }  from './question-textbox';
 @Component({
   selector: 'app-root',
   template: `
