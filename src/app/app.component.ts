@@ -1,10 +1,11 @@
 import { Component }       from '@angular/core';
-import { FormGroup } from '@angular/forms'
+import { FormGroup , FormArray } from '@angular/forms'
 import { QuestionService } from './question.service';
 import { DropdownQuestion } from './question-dropdown';
 import { QuestionBase }     from './question-base';
 import { TextboxQuestion }  from './question-textbox';
 import { RadioQuestion}  from  './question-radio';
+import { CheckboxQuestion } from './question-checkbox';
 
 @Component({
   selector: 'app-root',
@@ -19,16 +20,6 @@ import { RadioQuestion}  from  './question-radio';
 export class AppComponent {
   questions: any[];
   questions2: QuestionBase<any>[] = [
-
-
-      new TextboxQuestion({
-        key: 'firstName',
-        label: 'First name2',
-        value: 'Bombasto',
-        required: true,
-        order: 5,
-       // class: 'red',
-      }),
 
      new DropdownQuestion({
         key: 'brave',
@@ -64,19 +55,28 @@ export class AppComponent {
       
 new RadioQuestion({
         key: 'sex',
-        label: 'Sexxx',
-        type: 'radio',
+        label: 'Sevvv',
+      
         options: [
-          {key: 'Male',  value: 'm'},
+          {key: 'Male',    value: 'm'},
           {key: 'Female',  value: 'f'}
         ],
         required: true,
         order: 4
+      }),
+      
+new CheckboxQuestion({
+        key: 'sex1',
+        label: 'Sexxx1',
+        value: 'mm',
+      }),
+      
+new CheckboxQuestion({
+        key:   'sex2',
+        label: '22222',
+        value: 'fff',
+        class: 'red'
       })
-      
-
-      
-
      
     ]
 
