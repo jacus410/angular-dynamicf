@@ -20,17 +20,6 @@ export class AppComponent {
   questions: any[];
   questions2: QuestionBase<any>[] = [
 
-      new DropdownQuestion({
-        key: 'brave',
-        label: 'Bravery Rating',
-        options: [
-          {key: 'solid',  value: 'Solid'},
-          {key: 'great',  value: 'Great'},
-          {key: 'good',   value: 'Good'},
-          {key: 'unproven', value: 'Unproven'}
-        ],
-        order: 4
-      }),
 
       new TextboxQuestion({
         key: 'firstName',
@@ -73,25 +62,20 @@ export class AppComponent {
       }),
 
       
-
-      new TextboxQuestion({
-        controlType: 'textbox',
-        name: 'aa',
-        key: 'email',
-        label: 'Email',
+new RadioQuestion({
+        key: 'sex',
+        label: 'Sexxx',
         type: 'radio',
-        value:'vv1'
-       
-      }),
-
-      new TextboxQuestion({
-        controlType: 'textbox',
-        name: 'aa',
-        key: 'email',
-        label: 'Email333',
-        type: 'radio',
-        value:'vv2'
+        options: [
+          {key: 'Male',  value: 'm'},
+          {key: 'Female',  value: 'f'}
+        ],
+        required: true,
+        order: 4
       })
+      
+
+      
 
      
     ]
