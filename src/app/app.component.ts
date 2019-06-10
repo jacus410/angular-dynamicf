@@ -23,7 +23,7 @@ export class AppComponent {
 
      new DropdownQuestion({
         key: 'brave',
-        label: 'Bravery Rating',
+        label: 'Bravery',
         options: [
           {key: 'solid',  value: 'Solid'},
           {key: 'great',  value: 'Great'},
@@ -55,11 +55,11 @@ export class AppComponent {
       
 new RadioQuestion({
         key: 'sex',
-        label: 'Sevvv',
+        label: 'PŁEĆ',
       
         options: [
-          {key: 'Male',    value: 'm'},
-          {key: 'Female',  value: 'f'}
+          {key: 'M',    value: 'm'},
+          {key: 'F',  value: 'f'}
         ],
         required: true,
         order: 4
@@ -67,13 +67,13 @@ new RadioQuestion({
       
 new CheckboxQuestion({
         key: 'sex1',
-        label: 'Sexxx1',
-        value: 'mm',
+        label: 'Sex11',
+        value: 'mmm',
       }),
       
 new CheckboxQuestion({
         key:   'sex2',
-        label: '22222',
+        label: 'sex22',
         value: 'fff',
         class: 'red'
       })

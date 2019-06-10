@@ -3,10 +3,12 @@
 
     <div *ngFor="let question of questions" >
       <app-question [question]="question" [form]="form" ></app-question>
-    </div>
+    
+    </div>&nbsp;&nbsp;<div>&nbsp;&nbsp;</div>&nbsp;&nbsp;
 
     <div>
-      <button type="submit" class="btn btn-info" [disabled]="!form.valid">Save</button>
+      
+      <button type="submit" class="" [disabled]="!form.valid">Save</button>
     </div>
   </form>
 

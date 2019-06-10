@@ -1,4 +1,4 @@
-<div [formGroup]="form" class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
+<div [formGroup]="form" class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-xs-12 ">
    <label [attr.for]="question.key">{{question.label}}</label>
 
   <div [ngSwitch]="question.controlType">
@@ -28,14 +28,14 @@
                         [value]="opt.value">
       </label>
     </div>
-  <div  *ngSwitchCase="'checkbox'"> 
-                              <input 
+  <div  *ngSwitchCase="'checkbox'" class="checkbox" >
+             <label>  aaa               <input 
                                     [formControlName]="question.key"
                                     [id]="question.key" 
                                     [type]="question.controlType"
                                     [class] = "question.class"
                                     [value] = "question.value"> 
-
+</label>
   </div>
   </div> 
 
