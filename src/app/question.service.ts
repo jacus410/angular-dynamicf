@@ -26,17 +26,7 @@ export class QuestionService {
         order: 4
       }),
 
-      new TextboxQuestion({
-        key: 'firstName',
-        label: 'First name2',
-        value: 'Bombasto',
-        required: true,
-        order: 5,
-        class: 'red',
-      }),
-
-        
-      
+           
        new TextboxQuestion({
         key: 'firstName',
         label: 'First name',
