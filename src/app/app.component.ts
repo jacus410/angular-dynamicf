@@ -1,9 +1,11 @@
 import { Component }       from '@angular/core';
-
+import { FormGroup } from '@angular/forms'
 import { QuestionService } from './question.service';
 import { DropdownQuestion } from './question-dropdown';
 import { QuestionBase }     from './question-base';
 import { TextboxQuestion }  from './question-textbox';
+import { RadioQuestion}  from  './question-radio';
+
 @Component({
   selector: 'app-root',
   template: `
@@ -70,13 +72,28 @@ export class AppComponent {
         class: 'red'
       }),
 
+      
+
       new TextboxQuestion({
-        key: 'emailAddress',
+        controlType: 'textbox',
+        name: 'aa',
+        key: 'email',
         label: 'Email',
         type: 'radio',
-        order: 1,
-        class: 'red',
+        value:'vv1'
+       
+      }),
+
+      new TextboxQuestion({
+        controlType: 'textbox',
+        name: 'aa',
+        key: 'email',
+        label: 'Email333',
+        type: 'radio',
+        value:'vv2'
       })
+
+     
     ]
 
   constructor(service: QuestionService) {

@@ -3,6 +3,7 @@ import { Injectable }       from '@angular/core';
 import { DropdownQuestion } from './question-dropdown';
 import { QuestionBase }     from './question-base';
 import { TextboxQuestion }  from './question-textbox';
+import { RadioQuestion }  from   './question-radio';
 
 @Injectable()
 export class QuestionService {
@@ -56,14 +57,20 @@ export class QuestionService {
       }),
 
       
-      
-      new TextboxQuestion({
-        key: 'emailAddress2',
-        label: 'Email2',
+
+     new RadioQuestion({
+        key: 'sex',
+        label: 'Sex',
         type: 'radio',
-        order: 1,
-        class: 'red',
+        options: [
+          {key: 'Male',  value: 'm'},
+          {key: 'Female',  value: 'f'}
+        ],
+        required: true,
+        order: 4
       })
+
+
     ];
 
     return questions.sort((a, b) => a.order - b.order);
