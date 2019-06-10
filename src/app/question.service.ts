@@ -34,17 +34,7 @@ export class QuestionService {
         class: 'red',
       }),
 
-     new DropdownQuestion({
-        key: 'brave',
-        label: 'Bravery Rating',
-        options: [
-          {key: 'solid',  value: 'Solid'},
-          {key: 'great',  value: 'Great'},
-          {key: 'good',   value: 'Good'},
-          {key: 'unproven', value: 'Unproven'}
-        ],
-        order: 6
-      }),      
+        
       
        new TextboxQuestion({
         key: 'firstName',
@@ -65,9 +55,11 @@ export class QuestionService {
         class: 'red'
       }),
 
+      
+      
       new TextboxQuestion({
-        key: 'emailAddress',
-        label: 'Email',
+        key: 'emailAddress2',
+        label: 'Email2',
         type: 'radio',
         order: 1,
         class: 'red',
