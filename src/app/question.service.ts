@@ -4,6 +4,7 @@ import { DropdownQuestion } from './question-dropdown';
 import { QuestionBase }     from './question-base';
 import { TextboxQuestion }  from './question-textbox';
 import { RadioQuestion }  from   './question-radio';
+import { CheckboxQuestion }  from   './question-checkbox';
 
 @Injectable()
 export class QuestionService {
@@ -59,6 +60,7 @@ export class QuestionService {
         required: true,
         order: 4
       })
+
 
 
     ];
