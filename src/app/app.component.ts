@@ -6,6 +6,7 @@ import { QuestionBase }     from './question-base';
 import { TextboxQuestion }  from './question-textbox';
 import { RadioQuestion}  from  './question-radio';
 import { CheckboxQuestion } from './question-checkbox';
+import { DateQuestion } from './question-date';
 
 @Component({
   selector: 'app-root',
@@ -42,10 +43,10 @@ export class AppComponent {
         class: 'red',
       }),
 
-       new TextboxQuestion({
+       new DateQuestion({
         key: 'secondName',
         label: 'First',
-        type: 'date',
+        type: 'number',
         value: 1,
         required: false,
         order: 2,
@@ -53,25 +54,24 @@ export class AppComponent {
       }),
 
       
-new RadioQuestion({
+    new RadioQuestion({
         key: 'sex',
         label: 'PŁEĆ',
-      
         options: [
-          {key: 'M',    value: 'm'},
-          {key: 'F',  value: 'f'}
+                  {key: 'M',  value: 'm'},
+                  {key: 'F',  value: 'f'}
         ],
         required: true,
         order: 4
       }),
       
-new CheckboxQuestion({
-        key: 'sex1',
+    new CheckboxQuestion({
+        key:  'sex1',
         label: 'Sex11',
         value: 'mmm',
       }),
       
-new CheckboxQuestion({
+    new CheckboxQuestion({
         key:   'sex2',
         label: 'sex22',
         value: 'fff',

@@ -34,14 +34,14 @@
                         [value]="opt.value">
       </label>
     </div>
-  <div  *ngSwitchCase="'checkbox'" class="checkbox" >
-             <label>  aaa               <input 
+  <div  *ngSwitchCase="'checkbox'"  >
+               <input 
                                     [formControlName]="question.key"
                                     [id]="question.key" 
                                     [type]="question.controlType"
                                     [class] = "question.class"
                                     [value] = "question.value"> 
-</label>
+
   </div>
   </div> 
 
