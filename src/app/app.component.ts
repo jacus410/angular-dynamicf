@@ -45,7 +45,7 @@ export class AppComponent {
        new TextboxQuestion({
         key: 'secondName',
         label: 'First',
-        type: 'number',
+        type: 'date',
         value: 1,
         required: false,
         order: 2,
