@@ -25,14 +25,13 @@
      </select>
 
      <div *ngSwitchCase="'radio'"  >
-      <label *ngFor="let opt of question.options">
-        {{opt.key}}
+      
                    <input
                         [type]="question.controlType"
                         [name]="question.key"
                         [formControlName]="question.key"
                         [value]="opt.value">
-      </label>
+      
     </div>
   <div  *ngSwitchCase="'checkbox'"  >
                <input 

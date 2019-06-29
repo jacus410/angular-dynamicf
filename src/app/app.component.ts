@@ -57,7 +57,7 @@ export class AppComponent {
     new RadioQuestion({
         key: 'sex',
         label: 'PŁEĆ',
-        name: 'cccc',
+    
         value: 'mm',
         required: true,
         order: 4
@@ -65,8 +65,8 @@ export class AppComponent {
 
       new RadioQuestion({
         key: 'sex',
-        label: 'PŁEĆ2',
-        name: 'cccc',
+        label: 'PŁEĆ',
+        
         value: 'mm',
         required: true,
         order: 5
