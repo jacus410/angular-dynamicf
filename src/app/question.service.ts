@@ -53,10 +53,7 @@ export class QuestionService {
         key: 'sex',
         label: 'Sexvvv',
         type: 'radio',
-        options: [
-          {key: 'Male',  value: 'm'},
-          {key: 'Female',  value: 'f'}
-        ],
+        value: 'm',
         required: true,
         order: 4
       })

@@ -57,12 +57,17 @@ export class AppComponent {
     new RadioQuestion({
         key: 'sex',
         label: 'PŁEĆ',
-        options: [
-                  {key: 'M',  value: 'm'},
-                  {key: 'F',  value: 'f'}
-        ],
+        value: 'mm',
         required: true,
         order: 4
+      }),
+
+      new RadioQuestion({
+        key: 'sex',
+        label: 'PŁEĆ2',
+        value: 'mm',
+        required: true,
+        order: 
       }),
       
     new CheckboxQuestion({
