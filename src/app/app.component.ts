@@ -1,6 +1,6 @@
 import { Component }       from '@angular/core';
 import { FormGroup , FormArray } from '@angular/forms'
-import { QuestionService } from './question.service';
+
 import { DropdownQuestion } from './question-dropdown';
 import { QuestionBase }     from './question-base';
 import { TextboxQuestion }  from './question-textbox';
@@ -16,7 +16,7 @@ import { DateQuestion } from './question-date';
       <app-dynamic-form [questions]="questions"></app-dynamic-form>
     </div>
   `,
-  providers:  [QuestionService]
+ 
 })
 export class AppComponent {
   questions: any[];
@@ -40,7 +40,7 @@ export class AppComponent {
         value: 'Bombasto',
         required: true,
         order: 3,
-        class: 'red',
+        class: 'red form-control',
       }),
 
        new DateQuestion({
@@ -50,44 +50,43 @@ export class AppComponent {
         value: 1,
         required: false,
         order: 2,
-        class: 'red'
+        class: 'red form-control'
       }),
 
       
     new RadioQuestion({
         key: 'sex',
-        label: 'PŁEĆ',
-    
-        value: 'mm',
-        required: true,
+       // label: 'PŁEĆ',
+        etyk: 'mmmm',
+        value: 'male',
+        required: false,
         order: 4
       }),
 
       new RadioQuestion({
         key: 'sex',
-        label: 'PŁEĆ',
-        
-        value: 'mm',
-        required: true,
+      //  label: 'PŁEĆ',
+        etyk: 'ffff',
+        value: 'female',
+        required: false,
         order: 5
       }),
       
     new CheckboxQuestion({
         key:  'sex1',
         label: 'Sex11',
-        value: 'mmm',
+        value: 'xxx'
       }),
       
-    new CheckboxQuestion({
-        key:   'sex2',
-        label: 'sex22',
-        value: 'fff',
-        class: 'red'
-      })
+   new CheckboxQuestion({
+        key:  'sex2',
+        label: 'Sex22',
+        value: 'yyy'
+      }),
      
     ]
 
-  constructor(service: QuestionService) {
+  constructor() {
     this.questions = this.questions2;
   }
 

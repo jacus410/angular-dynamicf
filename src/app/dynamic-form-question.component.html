@@ -30,16 +30,18 @@
                         [type]="question.controlType"
                         [name]="question.key"
                         [formControlName]="question.key"
-                        [value]="opt.value">
+                        [value] = "question.value"
+                        > {{question.etyk}}
       
     </div>
   <div  *ngSwitchCase="'checkbox'"  >
                <input 
                                     [formControlName]="question.key"
-                                    [id]="question.key" 
+                                   
                                     [type]="question.controlType"
-                                    [class] = "question.class"
-                                    [value] = "question.value"> 
+                                  
+                                    [(value)] = "question.value"
+                                    >{{question.value}}
 
   </div>
   </div> 
