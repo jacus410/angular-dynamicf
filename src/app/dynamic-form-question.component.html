@@ -17,7 +17,9 @@
 
     <select *ngSwitchCase="'dropdown'"  
                                     [formControlName]="question.key" 
-                                    [id]="question.key" >
+                                    [id]="question.key" 
+                                    [class] = "question.class">
+
                                          <option *ngFor="let opt of question.options" 
                                             [value]="opt.key">
                                             {{opt.value}}
@@ -25,14 +27,35 @@
      </select>
 
      <div *ngSwitchCase="'radio'"  >
-      
-                   <input
+      <div class="btn-group"
+             btnRadioGroup
+             [formControlName]="question.key">
+
+           <label class="btn btn-success"
+                  style="padding: 4px; margin-bottom: 4px;"
+                  btnRadio="1H"
+                  tabindex="0"
+                  role="button">1H
+           </label>
+
+           <label class="btn btn-success"
+                  style="padding: 4px; margin-bottom: 4px;"
+                  btnRadio="4H"
+                  tabindex="0"
+                  role="button">4H
+          </label>
+
+        </div>
+
+
+
+              <!--     <input
                         [type]="question.controlType"
                         [name]="question.key"
                         [formControlName]="question.key"
                         [value] = "question.value"
                         [class] = "question.class"
-                        > {{question.etyk}}
+                        > {{question.etyk}} -->
       
     </div>
   <div  *ngSwitchCase="'checkbox'"  >

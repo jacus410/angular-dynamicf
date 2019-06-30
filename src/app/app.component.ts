@@ -58,22 +58,22 @@ export class AppComponent {
     new RadioQuestion({
         key: 'sex',
        // label: 'PŁEĆ',
-        etyk: 'mmmm',
-        value: 'male',
-        required: false,
-        order: 4
+     //   etyk: 'mmmm',
+    //    value: 'male',
+    //    required: false,
+    //    order: 4
       }),
 
-      new RadioQuestion({
-        key: 'sex',
+  //    new RadioQuestion({
+  //      key: 'sex',
       //  label: 'PŁEĆ',
-        etyk: 'ffff',
-        value: 'female',
-        required: false,
-        order: 5
-      }),
+ ///       etyk: 'ffff',
+ //       value: 'female',
+ //       required: false,
+ //       order: 5
+  //    }),
 
-      new RadioQuestion({
+ /*     new RadioQuestion({
         key: 'sex',
       //  label: 'PŁEĆ',
         etyk: '',
@@ -82,12 +82,12 @@ export class AppComponent {
         order: 6,
         class: 'hide'
       }),
-      
+  */    
     new CheckboxQuestion({
         key:  'sex1',
         label: 'Sex11',
-        value: 'xxx',
-        class: 'hide'
+       
+       
       }),
       
    new CheckboxQuestion({
