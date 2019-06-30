@@ -31,7 +31,8 @@ export class AppComponent {
           {key: 'good',   value: 'Good'},
           {key: 'unproven', value: 'Unproven'}
         ],
-        order: 6
+        order: 6,
+        class: 'red form-control'
       }),      
       
        new TextboxQuestion({
@@ -71,11 +72,22 @@ export class AppComponent {
         required: false,
         order: 5
       }),
+
+      new RadioQuestion({
+        key: 'sex',
+      //  label: 'PŁEĆ',
+        etyk: '',
+        value: '',
+        required: false,
+        order: 6,
+        class: 'hide'
+      }),
       
     new CheckboxQuestion({
         key:  'sex1',
         label: 'Sex11',
-        value: 'xxx'
+        value: 'xxx',
+        class: 'hide'
       }),
       
    new CheckboxQuestion({

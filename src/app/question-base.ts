@@ -8,6 +8,7 @@ export class QuestionBase<T> {
   controlType: string;
   class: string;
   etyk: string;
+  style: string;
 
   constructor(options: {
       value?: T,
@@ -19,6 +20,7 @@ export class QuestionBase<T> {
       controlType?: string,
       class?: string,
       etyk?: string,
+      style?: string,
     } = {}) {
     this.value = options.value;
     this.key = options.key || '';
@@ -29,6 +31,7 @@ export class QuestionBase<T> {
     this.controlType = options.controlType || '';
     this.class = options.class || '';
     this.etyk = options.etyk || '';
+    this.style = options.style || '';
   }
 }
 

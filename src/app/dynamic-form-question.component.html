@@ -31,6 +31,7 @@
                         [name]="question.key"
                         [formControlName]="question.key"
                         [value] = "question.value"
+                        [class] = "question.class"
                         > {{question.etyk}}
       
     </div>
@@ -38,9 +39,10 @@
                <input 
                                     [formControlName]="question.key"
                                    
-                                    [type]="question.controlType"
+                                    type="checkbox"
                                   
-                                    [(value)] = "question.value"
+                                    [value] = "question.value"
+                                    [class] = "question.class"
                                     >{{question.value}}
 
   </div>
