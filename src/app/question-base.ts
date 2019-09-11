@@ -3,36 +3,39 @@ export class QuestionBase<T> {
   key: string;
   
   label: string;
-  required: boolean;
+  validate: boolean;
   order: number;
   controlType: string;
   class: string;
   etyk: string;
   style: string;
+  validators: any[];
 
   constructor(options: {
       value?: T,
       key?: string,
       
       label?: string,
-      required?: boolean,
+      validate?: boolean,
       order?: number,
       controlType?: string,
       class?: string,
       etyk?: string,
       style?: string,
+      validators?: any,
+
     } = {}) {
     this.value = options.value;
     this.key = options.key || '';
    
     this.label = options.label || '';
-    this.required = 
-    options.required;
+    this.validate = options.validate;
     this.order = options.order === undefined ? 1 : options.order;
     this.controlType = options.controlType || '';
     this.class = options.class || '';
     this.etyk = options.etyk || '';
     this.style = options.style || '';
+    this.validators = options.validators || '';
   }
 }
 

@@ -1,5 +1,5 @@
 import { Component }       from '@angular/core';
-import { FormGroup , FormArray } from '@angular/forms'
+import { FormGroup , FormArray, Validators } from '@angular/forms'
 
 import { DropdownQuestion } from './question-dropdown';
 import { QuestionBase }     from './question-base';
@@ -32,26 +32,30 @@ export class AppComponent {
           {key: 'unproven', value: 'Unproven'}
         ],
         order: 6,
-        class: 'red form-control'
+        class: 'red form-control',
+        validate: true,
+        validators: [Validators.required]
       }),      
       
        new TextboxQuestion({
         key: 'firstName',
         label: 'First name',
-        value: 'Bombasto',
-        required: true,
+        value: 'xxxx',
+        validate: true,
         order: 3,
         class: 'red form-control',
+        validators: [Validators.required, Validators.minLength(5)]
       }),
 
        new DateQuestion({
         key: 'secondName',
         label: 'First',
-        type: 'number',
-        value: 1,
-        required: false,
-        order: 2,
-        class: 'red form-control'
+     
+        value: '',
+        validate: true,
+       
+        class: 'form-control',
+         validators: [Validators.required]
       }),
 
       

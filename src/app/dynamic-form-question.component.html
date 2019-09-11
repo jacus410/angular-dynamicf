@@ -7,12 +7,14 @@
                                     [formControlName]="question.key"
                                     [id]="question.key" 
                                     [type]="question.controlType"
+                                 
                                     [class] = "question.class">
                         
     <input *ngSwitchCase="'date'" 
                                     [formControlName]="question.key"
                                     [id]="question.key" 
                                     [type]="question.controlType"
+                                  
                                     [class] = "question.class">
 
     <select *ngSwitchCase="'dropdown'"  
